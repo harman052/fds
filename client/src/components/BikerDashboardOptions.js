@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BikerConfig } from "../config";
 import DashboardHeader from "../components/DashboardHeader";
 import ActionCard from "../components/ActionCard";
-import { BikerParcelListConfig } from "../config";
+import { BikerParcelListConfig, Messages } from "../config";
 
 import {
   HeadingText,
@@ -55,9 +55,7 @@ const BikerDashboardOptions = ({ state, userName }) => {
           </ActionCardContainer>
         </CardSection>
       ) : (
-        <SmallHeadingSection>
-          Currently no parcels assigned.
-        </SmallHeadingSection>
+        <SmallHeadingSection>{Messages.noParcelsAvailable}</SmallHeadingSection>
       )}
     </>
   );

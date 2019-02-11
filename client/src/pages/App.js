@@ -8,7 +8,7 @@ const App = () => {
 
   for (let i = 0; i < 10; i++) {
     bikers.push(
-      <div>
+      <div key={i + 1}>
         <Link to={`/biker/biker${i + 1}`}>{`Biker${i + 1} Tasks`}</Link>
       </div>
     );

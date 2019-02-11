@@ -39,3 +39,7 @@ export const HomePage = {
   description:
     "Access the following links to view different sections of this app"
 };
+
+export const api = {
+  getMockData: "/api/getMockData"
+};

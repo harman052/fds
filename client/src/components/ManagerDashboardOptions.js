@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ManagerConfig } from "../config";
+import { ManagerConfig, ParcelListConfig } from "../config";
 import DashboardHeader from "../components/DashboardHeader";
 import ActionCard from "../components/ActionCard";
-import { ParcelListConfig } from "../config";
 
 import {
   HeadingText,

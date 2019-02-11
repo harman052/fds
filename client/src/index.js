@@ -7,39 +7,50 @@ import * as serviceWorker from "./serviceWorker";
 import rootReducer from "./reducers";
 import Root from "./components/Root";
 import { loadState, saveState } from "./sessionStorage";
-import parcels from "./data/parcelMockData";
 
-/**
- * Saving the initial state to sessionStorage so as
- * to keep the view persistent for current session.
- */
-saveState(parcels);
+const getMockData = async () => {
+  const response = await fetch("/api/getMockData");
+  const body = await response.json();
+  if (response.status !== 200) throw Error(body.message);
+  return body;
+};
 
-// Getting state from sessionStorage to load into store
-const persistedState = loadState();
+getMockData()
+  .then(res => {
+    console.log(res);
+    /**
+     * Saving the initial state to sessionStorage so as
+     * to keep the view persistent for current session.
+     */
+    saveState(res.data);
 
-// Passing second argument to createStore to initialize the state
-const store = createStore(rootReducer, persistedState);
+    // Getting state from sessionStorage to load into store
+    const persistedState = loadState();
 
-/**
- * Saving state to sessionStorage everytime the state updates
- * to keep the view persistent for current session. State will
- * lost if user closes current tab or browser window.
- *
- * For more real world scenarios, rather saving state on every
- * update, a throttle function (for example, _.throttle from Lodash)
- * can be used to delay save for specified amount of time.
- */
-store.subscribe(() => {
-  saveState(store.getState());
-});
+    // Passing second argument to createStore to initialize the state
+    const store = createStore(rootReducer, persistedState);
 
-render(
-  <Root store={store} subscribe={store.subscribe} />,
-  document.getElementById("root")
-);
+    /**
+     * Saving state to sessionStorage everytime the state updates
+     * to keep the view persistent for current session. State will
+     * lost if user closes current tab or browser window.
+     *
+     * For more real world scenarios, rather saving state on every
+     * update, a throttle function (for example, _.throttle from Lodash)
+     * can be used to delay save for specified amount of time.
+     */
+    store.subscribe(() => {
+      saveState(store.getState());
+    });
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    render(
+      <Root store={store} subscribe={store.subscribe} />,
+      document.getElementById("root")
+    );
+
+    // If you want your app to work offline and load faster, you can change
+    // unregister() to register() below. Note this comes with some pitfalls.
+    // Learn more about service workers: http://bit.ly/CRA-PWA
+    serviceWorker.unregister();
+  })
+  .catch(err => console.log(err));
