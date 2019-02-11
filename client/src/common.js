@@ -150,6 +150,15 @@ export const CustomAlert = styled(Alert)`
   align-items: center;
 `;
 
+export const CustomSuccessAlert = styled(CustomAlert)`
+  display: flex;
+  align-items: center;
+  svg {
+    padding-right: 10px;
+    font-size: 27px;
+  }
+`;
+
 export const countParcels = (list, status) => {
   let filteredItems = list.filter(parcel => parcel.orderStatus === status);
   return filteredItems.length;
