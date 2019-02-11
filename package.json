@@ -10,7 +10,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
