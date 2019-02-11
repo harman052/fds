@@ -14,7 +14,6 @@ const ParcelColumns = ({
   deliverParcel
 }) => {
   let filteredItems = state.filter(parcel => {
-    console.log(parcel.orderStatus);
     return parcel.orderStatus === status;
   });
   return (

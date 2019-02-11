@@ -7,9 +7,17 @@ import * as serviceWorker from "./serviceWorker";
 import rootReducer from "./reducers";
 import Root from "./components/Root";
 import { loadState, saveState } from "./sessionStorage";
+import parcels from "./data/parcelMockData";
 
+/**
+ * Saving the initial state to sessionStorage so as
+ * to keep the view persistent for current session.
+ */
+saveState(parcels);
+
+// Getting state from sessionStorage to load into store
 const persistedState = loadState();
-console.log("index.js");
+
 // Passing second argument to createStore to initialize the state
 const store = createStore(rootReducer, persistedState);
 

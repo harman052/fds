@@ -1,6 +1,4 @@
-import parcels from "../data/parcelMockData";
-
-export default (state = parcels, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case "ASSIGN_PARCEL":
       return state.map(parcel =>

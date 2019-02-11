@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { SmallHeading, CustomCardText, SmallHeadingSection } from "../common";
-import DashboardHeader from "./DashboardHeader";
 
 const NotFound = () => {
   return (
