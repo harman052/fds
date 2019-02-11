@@ -17,7 +17,6 @@ const getMockData = async () => {
 
 getMockData()
   .then(res => {
-    console.log(res);
     /**
      * Saving the initial state to sessionStorage so as
      * to keep the view persistent for current session.

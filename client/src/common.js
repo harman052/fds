@@ -5,7 +5,13 @@
  * elements or existing components using styled-components.
  */
 
-import { Jumbotron, Card, CardColumns, ListGroup } from "react-bootstrap";
+import {
+  Jumbotron,
+  Card,
+  CardColumns,
+  ListGroup,
+  Alert
+} from "react-bootstrap";
 import styled from "styled-components";
 import colors from "./utils/colors";
 
@@ -118,7 +124,7 @@ export const ParcelContainer = styled.div`
 `;
 
 export const CustomListGroup = styled(ListGroup)`
-  width: 22rem;
+  width: 24rem;
   @media (max-width: 360px) {
     width: 14rem;
   }
@@ -134,6 +140,14 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const CustomAlert = styled(Alert)`
+  width: ${props => (props.width ? props.width : "100%")};
+  display: flex;
+  align-items: center;
 `;
 
 export const countParcels = (list, status) => {
