@@ -1,60 +1,57 @@
-{
-    "managers": [{
-      "name": "Mike",
-      "userName": "mgr1",
-      "password": null,
-      "role": "manager"
-    }],
-    "bikers": [
-      {
-        "userName": "biker1",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker2",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker3",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker4",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker5",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker6",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker7",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker8",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker9",
-        "password": null,
-        "role": "biker"
-      },
-      {
-        "userName": "biker10",
-        "password": null,
-        "role": "biker"
-      }
-    ]
+[
+  {
+    "username": "mgr1",
+    "password": "mgr1",
+    "role": "manager"
+  },
+  {
+    "username": "biker1",
+    "password": "biker1",
+    "role": "biker"
+  },
+  {
+    "username": "biker2",
+    "password": "biker2",
+    "role": "biker"
+  },
+  {
+    "username": "biker3",
+    "password": "biker3",
+    "role": "biker"
+  },
+  {
+    "username": "biker4",
+    "password": "biker4",
+    "role": "biker"
+  },
+  {
+    "username": "biker5",
+    "password": "biker5",
+    "role": "biker"
+  },
+  {
+    "username": "biker6",
+    "password": "biker6",
+    "role": "biker"
+  },
+  {
+    "username": "biker7",
+    "password": "biker7",
+    "role": "biker"
+  },
+  {
+    "username": "biker8",
+    "password": "biker8",
+    "role": "biker"
+  },
+  {
+    "username": "biker9",
+    "password": "biker9",
+    "role": "biker"
+  },
+  {
+    "username": "biker10",
+    "password": "biker10",
+    "role": "biker"
   }
+]

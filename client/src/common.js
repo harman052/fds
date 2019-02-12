@@ -23,6 +23,9 @@ export const HeadingSection = styled(Jumbotron)`
 export const SmallHeadingSection = styled(HeadingSection)`
   padding: 2rem 1rem;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CardSection = styled.div`

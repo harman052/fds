@@ -8,52 +8,52 @@ const users = {
   bikers: [
     {
       userName: "biker1",
-      password: null,
+      password: "biker1",
       role: "biker"
     },
     {
       userName: "biker2",
-      password: null,
+      password: "biker2",
       role: "biker"
     },
     {
       userName: "biker3",
-      password: null,
+      password: "biker3",
       role: "biker"
     },
     {
       userName: "biker4",
-      password: null,
+      password: "biker4",
       role: "biker"
     },
     {
       userName: "biker5",
-      password: null,
+      password: "biker5",
       role: "biker"
     },
     {
       userName: "biker6",
-      password: null,
+      password: "biker6",
       role: "biker"
     },
     {
       userName: "biker7",
-      password: null,
+      password: "biker7",
       role: "biker"
     },
     {
       userName: "biker8",
-      password: null,
+      password: "biker8",
       role: "biker"
     },
     {
       userName: "biker9",
-      password: null,
+      password: "biker9",
       role: "biker"
     },
     {
       userName: "biker10",
-      password: null,
+      password: "biker10",
       role: "biker"
     }
   ]

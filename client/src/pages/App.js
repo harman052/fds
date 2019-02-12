@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { SmallHeading, CustomCardText, SmallHeadingSection } from "../common";
+import Login from "../components/Login";
 import { HomePage } from "../config";
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
       <SmallHeadingSection>
         <SmallHeading>{HomePage.welcome}</SmallHeading>
         <CustomCardText>{HomePage.description}</CustomCardText>
-
+        <Login />
         <div>
           <Link to={`/manager/mgr1`}>Manager Dashboard</Link>
         </div>
